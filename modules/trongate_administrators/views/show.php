@@ -19,12 +19,32 @@
                 <div class="detail-value"><?= out($username) ?></div>
             </div>
             <div class="detail-row">
+                <div class="detail-label">Email Address</div>
+                <div class="detail-value"><?= empty($email) ? '—' : out($email) ?></div>
+            </div>
+            <div class="detail-row">
                 <div class="detail-label">Trongate User ID</div>
                 <div class="detail-value"><?= out($trongate_user_id) ?></div>
             </div>
             <div class="detail-row">
                 <div class="detail-label">Status</div>
                 <div class="detail-value"><?= out($active_formatted) ?></div>
+            </div>
+            <div class="detail-row">
+                <div class="detail-label">Failed Login Attempts</div>
+                <div class="detail-value"><?= out($failed_login_attempts) ?></div>
+            </div>
+            <div class="detail-row">
+                <div class="detail-label">Last Failed Attempt</div>
+                <div class="detail-value"><?= out($last_failed_attempt_formatted) ?></div>
+            </div>
+            <div class="detail-row">
+                <div class="detail-label">Login Blocked Until</div>
+                <div class="detail-value"><?= out($login_blocked_until_formatted) ?></div>
+            </div>
+            <div class="detail-row">
+                <div class="detail-label">Failed Login IP</div>
+                <div class="detail-value"><?= empty($failed_login_ip) ? '—' : out($failed_login_ip) ?></div>
             </div>
         </div>
     </div>

@@ -30,7 +30,7 @@ echo Modules::run('pagination/display', $pagination_data);
     <table class="records-table">
         <thead>
             <tr>
-                <th colspan="4">
+                <th colspan="7">
                     <div>
                         <div>&nbsp;</div>
                         <div>Records Per Page: <?php
@@ -42,8 +42,11 @@ echo Modules::run('pagination/display', $pagination_data);
             </tr>
             <tr>
                 <th class="text-left">Username</th>
+                <th class="text-left">Email Address</th>
                 <th class="text-left">Trongate User ID</th>
                 <th class="text-left">Active</th>
+                <th class="text-left">Failed Attempts</th>
+                <th class="text-left">Login Blocked Until</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -62,8 +65,11 @@ echo Modules::run('pagination/display', $pagination_data);
                 ?>
                 <tr>
                     <td><?= anchor('#', out($row->username), $link_attr) ?></td>
+                    <td><?= empty($row->email) ? '—' : out($row->email) ?></td>
                     <td><?= out($row->trongate_user_id) ?></td>
                     <td><?= out($row->active_formatted) ?></td>
+                    <td><?= out($row->failed_login_attempts) ?></td>
+                    <td><?= out($row->login_blocked_until_formatted) ?></td>
                     <td>
                         <div class="actions">
                             <a href="trongate_administrators/show/<?= $row->id ?>" class="button alt button-round"><i class="tg tg-eye"></i></a>

@@ -79,6 +79,7 @@ class Trongate_administrators_model extends Model {
     public function get_data_from_post(): array {
         return [
             'username' => post('username', true),
+            'email'    => post('email', true),
             'active'   => post('active', true)
         ];
     }
@@ -336,6 +337,12 @@ class Trongate_administrators_model extends Model {
      */
     public function prepare_record_for_display(object $record_obj): object {
         $record_obj->active_formatted = ((int) $record_obj->active === 1) ? 'Active' : 'Not Active';
+        $record_obj->last_failed_attempt_formatted = ((int) $record_obj->last_failed_attempt > 0)
+            ? date('jS M Y, H:i', (int) $record_obj->last_failed_attempt)
+            : '—';
+        $record_obj->login_blocked_until_formatted = ((int) $record_obj->login_blocked_until > 0)
+            ? date('jS M Y, H:i', (int) $record_obj->login_blocked_until)
+            : '—';
         return $record_obj;
     }
 

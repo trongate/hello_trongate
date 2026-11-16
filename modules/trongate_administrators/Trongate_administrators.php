@@ -279,6 +279,7 @@ class Trongate_administrators extends Trongate {
         }
         
         $this->validation->set_rules('username', 'username', 'required|min_length[2]|max_length[50]|callback_username_check');
+        $this->validation->set_rules('email', 'email address', 'valid_email|max_length[255]');
         
         if ($this->validation->run() !== true) {
             $this->create();

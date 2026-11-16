@@ -22,6 +22,14 @@
         ];
         echo form_input('username', $username, $username_attr);
 
+        echo form_label('Email Address');
+        $email_attr = [
+            'placeholder' => 'Enter Email Address',
+            'maxlength' => 255,
+            'autocomplete' => 'off'
+        ];
+        echo form_email('email', $email, $email_attr);
+
         echo '<label>';
         echo form_checkbox('active', 1, $active);
         echo ' Active';
