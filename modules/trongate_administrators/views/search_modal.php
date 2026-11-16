@@ -7,6 +7,7 @@
 
 $searchable_columns = [
     'username' => 'Username',
+    'email' => 'Email Address',
 ];
 
 $form_attr = ['id' => 'search-form'];

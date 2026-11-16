@@ -65,7 +65,7 @@ class Trongate_administrators_model extends Model {
      * @return array<string>
      */
     public function get_searchable_columns(): array {
-        return ['username'];
+        return ['username', 'email'];
     }
     
     /**
