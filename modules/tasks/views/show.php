@@ -1,0 +1,24 @@
+<h1><?= $headline ?></h1>
+<?= flashdata() ?>
+<div class="card">
+    <div class="card-heading">
+        Task Details
+    </div>
+    <div class="card-body">
+        <div class="text-right mb-3">
+            <?= anchor($back_url, 'Back', array('class' => 'button alt')) ?>
+            <?= anchor(BASE_URL.'tasks/create/'.$update_id, 'Edit', array('class' => 'button')) ?>
+            <?= anchor('tasks/delete_conf/'.$update_id, 'Delete',  array('class' => 'button danger')) ?>
+        </div>
+        <div class="detail-grid">
+            <div class="detail-row">
+                <div class="detail-label">Task Title</div>
+                <div class="detail-value"><?= out($task_title) ?></div>
+            </div>
+            <div class="detail-row">
+                <div class="detail-label">Complete</div>
+                <div class="detail-value"><?= out($complete) ?></div>
+            </div>
+        </div>
+    </div>
+</div>
