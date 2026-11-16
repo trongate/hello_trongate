@@ -5,7 +5,7 @@
     </div>
     <div class="card-body">
         <h3 class="text-center mt-0">Are you sure?</h3>
-        <p>You are about to delete a task record. This cannot be undone. Do you really want to do this?</p>
+        <p class="text-center">You are about to delete a <?= strtolower($record_name_singular) ?> record. This cannot be undone. Do you really want to do this?</p>
         
         <?php
         echo form_open($form_location);
