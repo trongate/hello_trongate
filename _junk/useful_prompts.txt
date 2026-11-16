@@ -1,0 +1,11 @@
+PULL REQUEST / START
+I like to do some work on the hello_trongate web application.  Before we begin, please pull the latest version from GitHub and then confirm that you're ready to receive my instructions.  We will be working on the branch named 'master'.
+
+RESPOND TO ISSUE (SHORT)
+An issue has appeared on the hello_trongate web application.  We are currently working on the Git branch named 'master'.  Please read and respond to the issue, which is posted on GitHub at the following URL:  https://github.com/trongate/hello_trongate/issues/x
+
+RESPOND TO ISSUE (FULL)
+An issue has been posted on GitHub that pertains to the hello_trongate web application.  We are currently working on the Git branch named 'master'.  Please navigate to the following URL.  Read the issue.  If comments have been left read the entire thread.  Then respond accordingly.  Once finished, please post a comment on the thread that sets out what you did.  If you have any questions, need further clarification or run into issues you may post those on the thread also.  URL:  https://github.com/trongate/hello_trongate/issues/x
+
+COMMIT WHEN FINISHED REQUEST
+Once you have finished, please commit your work then post a comment here. If you have any questions please post a comment, clearly indicating what questions you have.
