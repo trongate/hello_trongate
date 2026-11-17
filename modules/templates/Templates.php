@@ -19,6 +19,10 @@ class Templates extends Trongate {
         block_url('templates');
     }
 
+    public function custom($data) {
+        $this->display('custom', $data);
+    }
+
     /**
      * Display admin theme template with provided data.
      *
