@@ -5,7 +5,18 @@ class Students extends Trongate {
         $data['headline'] = 'Headline Ahoy';
         $data['students'] = $this->model->get_students();
         $data['view_file'] = 'students_list';
+
+        echo json_encode($data);
+        die();
+
         $this->templates->custom($data);
+    }
+
+    public function demo() {
+        $json_str = '{"headline":"Headline Ahoy","students":[{"first_name":"Harry","last_name":"Malone","city":"London"},{"first_name":"Eric","last_name":"Clapton","city":"Manchester"},{"first_name":"Jimi","last_name":"Hendrix","city":"New York"}],"view_file":"students_list"}';
+
+        $data = json_decode($json_str);
+        json($data);
     }
 
 }
