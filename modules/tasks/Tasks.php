@@ -53,6 +53,7 @@ class Tasks extends Trongate {
             $rows = $this->model->search_records($search_query, $search_column, $limit, $offset);
         } else {
             $rows = $this->model->fetch_records($limit, $offset);
+            var_dump($rows); die();
         }
         $rows = $this->model->prepare_records_for_display($rows);
 

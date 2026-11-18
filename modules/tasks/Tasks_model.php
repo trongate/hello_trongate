@@ -80,7 +80,7 @@ class Tasks_model extends Model {
      */
     public function fetch_records(int $limit, int $offset): array {
         $sql = 'SELECT * FROM '.$this->table_name.' ORDER BY id LIMIT '.$limit.' OFFSET '.$offset;
-        return $this->db->query($sql, 'object');
+        return $this->db->query($sql, 'array');
     }
     
     /**

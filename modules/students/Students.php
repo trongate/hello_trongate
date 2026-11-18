@@ -5,11 +5,13 @@ class Students extends Trongate {
         $data['headline'] = 'Headline Ahoy';
         $data['students'] = $this->model->get_students();
         $data['view_file'] = 'students_list';
+        $this->templates->admin($data);
+    }
 
-        echo json_encode($data);
-        die();
-
-        $this->templates->custom($data);
+    public function delete() {
+        $update_id = segment(3);
+        $this->db->delete($update_id, 'students');
+        echo 'Deleted';
     }
 
     public function demo() {

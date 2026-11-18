@@ -99,6 +99,11 @@ if (strtolower(ENV) === 'dev') {
                     Manage Tasks
                 </a>
             </li>
+            <li>
+                <a href="students/manage">
+                    Manage Students
+                </a>
+            </li>
         </ul>
     </nav>
 </aside>
@@ -149,6 +154,7 @@ if (strtolower(ENV) === 'dev') {
     <li><a href="#">Settings</a></li>
     <li><a href="logout">Log Out</a></li>
     <li><a href="tasks/manage">Manage Tasks</a></li>
+    <li><a href="students/manage">Manage Students</a></li>
   </ul>
 </nav>
 
